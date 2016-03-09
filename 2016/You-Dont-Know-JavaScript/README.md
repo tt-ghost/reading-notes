@@ -6,9 +6,9 @@
 #### 编译原理
 通常讲JavaScript归类为“动态”、“解释执行”语言，事实上它是一门编译语言。源代码在执行前会经历三个步骤：
 + 分词/词法分析(Tokenizing/Lexing)
-如<code>var a = 2;</code> 会分解成以下词法单元<code>var</code> <code>a</code> <code>=</code> <code>2</code> <code>;</code>；
+  + 如<code>var a = 2;</code> 会分解成以下词法单元<code>var</code> <code>a</code> <code>=</code> <code>2</code> <code>;</code>；
 + 解析/语法分析(Parsing)
-将上一步的词法单元流（数组）转成嵌套的 ”抽象语法树“(Abstrac Syntax Tree. AST);
+  + 将上一步的词法单元流（数组）转成嵌套的 ”抽象语法树“(Abstrac Syntax Tree. AST);
   + <code>VariableDeclaration(var)</code> -> 
     + <code>Identifier(a)</code> -> 
       + <code>AssignmentExpression(=)</code> -> 
