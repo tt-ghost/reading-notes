@@ -39,8 +39,42 @@
 
 #### 欺骗词法
 + 欺骗词法作用域会导致性能下降
-+ eval
+##### eval
+```javascript
+function evalTest1(str, b){ 
+  eval(str);
+  console.log(a,b);
+}
+evalTest1("var a=3", 3); // 3 3 
+```
+eval 有自己的作用域
+```javascript
+function evalTest1(str){ 
+  "use strict"; // 严格模式
+  eval(str);
+  console.log(a); // ReferenceError: a is not defined
+}
+evalTest1("var a=3");
+```
+与eval类似还有，setTimeout、setInterval及new Function
 
-
-
+##### with
+- 尽管with块可以将一个对象处理为词法作用域，但是这个块内部的 var 申明并不会被限制在这个块的作用域中，而是被添加到with所处的函数作用域中
+- eval 函数如果接受了含有一个或多个申明的代码，就会修改其所处的词法作用域，而with申明实际上是根据你传递给他的对象凭空创建了一个全新的词法作用域
+- eval在严格模式下被严格禁用，而在保留核心功能的前提下，间接或非安全的使用eval也被禁止了
+```javascript
+function foo(obj){
+  with(obj){
+    a=2;
+  }
+}
+var o1 = {a:3};
+var o2 = {b:4};
+foo(o1);
+console.log(o1.a) // 2
+foo(o2);
+console.log(o2.a) // undefined
+console.log(a); //2，a被泄漏到全局作用域了
+```
+### 第三章 函数作用域和块作用域
 
