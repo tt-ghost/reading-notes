@@ -5,3 +5,10 @@
 
 - 名字首字母为大写的程序实体可以被任何代码包中的代码访问到。
 - 而名字首字母为小写的程序实体则只能被同一个代码包中的代码所访问。 
+
+### 关键字
+
+|用途|关键字|
+|程序申明|import, package|
+|程序实体声明和定义|chan, const, func, interface, map, struct, type, var|
+|程序流程控制|go, select, break, case, continue, default, defer, else, faultthrough, for, goto, if, range, return, switch|
