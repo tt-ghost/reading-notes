@@ -9,6 +9,7 @@
 ### 关键字
 
 |用途|关键字|
+|----|-----|
 |程序申明|import, package|
 |程序实体声明和定义|chan, const, func, interface, map, struct, type, var|
 |程序流程控制|go, select, break, case, continue, default, defer, else, faultthrough, for, goto, if, range, return, switch|
