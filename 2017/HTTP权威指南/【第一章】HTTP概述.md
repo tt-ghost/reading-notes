@@ -64,7 +64,8 @@ Content-Type: text/html
 
 ```
 
-说明：
+**说明：**
+
 1. Telnet会查找主机名并打开一条连接，连接到在`www.baidu.com`的端口为80上监听的Web服务器，之后三行为Telnet输出，连接结果
 2. 然后输入`GET / HTTP/1.1` 发送一个提供了源端主机名的`Host`首部，后面跟一空行
 3. Telnet可以很好的模拟HTTP客户端。更灵活工具可以看看`nc`(netcat)，方便的操纵`UDC`和`TCP`的流量。
