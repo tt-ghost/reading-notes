@@ -77,3 +77,12 @@ Content-Type: text/html
 ### 四、Web的结构组件
 
 代理、缓存、网关、隧道、Agent代理
+
+### 五、扩张信息
+
+#### HTTP协议信息
+
+- [http://www.w3.org/Protocols](http://www.w3.org/Protocols)
+- [RFC2616 超文本传输协议——HTTP/1.1](http://www.ietf.org/rfc/rfc2616.txt)
+- [RFC1945 超文本传输协议——HTTP/1.0](http://www.ietf.org/rfc/rfc2616.txt)
+
