@@ -70,4 +70,10 @@ Content-Type: text/html
 2. 然后输入`GET / HTTP/1.1` 发送一个提供了源端主机名的`Host`首部，后面跟一空行
 3. Telnet可以很好的模拟HTTP客户端。更灵活工具可以看看`nc`(netcat)，方便的操纵`UDC`和`TCP`的流量。
 
+### 三、协议版本
 
+目前在使用的版本有`HTTP/0.9`、`HTTP/1.0`、`HTTP/1.0+`、`HTTP/1.1`(当前版本)，还有`HTTP-NG`(又名`HTTP/2.0`)
+
+### 四、Web的结构组件
+
+代理、缓存、网关、隧道、Agent代理
