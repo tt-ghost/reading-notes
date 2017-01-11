@@ -3,7 +3,7 @@
 
 ### 一、媒体类型
 
-#### 1、HTTP会为每种通过WEB传输的对象打上MIME类型(Multipurpose Internet Mail Extension，多用途因特网邮件扩展)
+#### 1、HTTP(HyperText Transfer Protocol)会为每种通过WEB传输的对象打上MIME类型(Multipurpose Internet Mail Extension，多用途因特网邮件扩展)
 
 - MIME类型是一种文本标记，表示一种主要对象类型和一个特定的子类型
 - 常见类型如：
