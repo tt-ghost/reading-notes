@@ -19,3 +19,7 @@ http://a.com/ha;sale=false/index.html;gra=true
 这里两个路径段，`ha`和`index.html`.`ha`路径段有参数`sale`，值为`false`;`index.html`段有参数`gra`，值为`true`
 
 #### 查询字符串，由`?`分隔
+
+### 字符
+
+特殊字符转义，跟`%`，用ASCII的16进制表示，比如空格十进制为32，十进制为`0x20`，URL中就是`%20`
