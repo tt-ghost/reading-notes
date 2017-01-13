@@ -40,7 +40,14 @@ http://a.com/ha;sale=false/index.html;gra=true
 |ftp|格式：`ftp://<user>:<password>@<host>:<port>/<path>;<params>`|
 |rtsp,rtspu|RTSP实时流传输协议(Real Time Streaming Protocol)解析音视频。`rtspu`的`u`表示使用`UDP`协议来获取资源。基本格式：`rtsp://<user>:<password>@<host>:<port>/<path>`，`rtspu://<user>:<password>@<host>:<port>/<path>`|
 |file|指定主机（本地磁盘、网络文件系统、其他文件共享系统）上直接访问文件。如`file://OFFICE-FS/policies/a.doc`|
-|news|用来访问一些特定的文章或新闻组，new URL自身包含的信息不足以对资源进行定位。`@`用来区分指定新闻组的news URL和指向特定新闻文章的news URL。基本格式：`news:<newsgroup>`和`news:<news-article-id>`，如:`news:rec.arts.startrek`|
+|news|[RFC 1036]参考(http://www.ietf.org/rfc/rfc1036.txt)。用来访问一些特定的文章或新闻组，new URL自身包含的信息不足以对资源进行定位。`@`用来区分指定新闻组的news URL和指向特定新闻文章的news URL。基本格式：`news:<newsgroup>`和`news:<news-article-id>`，如:`news:rec.arts.startrek`|
+|telnet|用于访问交互式业务，表示的并不是对象自身，而是可通过telnet协议访问的交互式应用（资源）。`telnet://<user>:<password>@<host>:<port>/`|
+
+### 未来展望
+
+- URL并不完美，它表示的是实际地址，而不是准确的名字。如果资源被移走了，URL将不再有效。为了应对这个问题，已经对一种叫统一资源名(uniform resource name, URN)的新标准，无论资源移动到哪都可以定位。
+- **永久统一资源定位符(persistent uniform resource locators, PURL)**是用URL来实现URN功能的一个例子。具体参考[http://purl.oclc.org](http://purl.oclc.org)
+
 
 
 
