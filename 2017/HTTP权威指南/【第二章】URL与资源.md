@@ -34,5 +34,14 @@ http://a.com/ha;sale=false/index.html;gra=true
 
 |方案|描述|
 |----|---|
-|http|没有用户名和密码，其他与通用url格式相符，端口默认80|
+|http|没有用户名和密码，其他与通用url格式相符，默认端口80|
+|https|与http对应，区别在于使用了`SSL`加密，默认端口443|
+|mailto|语法基础参见[RFC 822](http://www.ietf.org/rfc/rfc0822.txt)|
+|ftp|格式：`ftp://<user>:<password>@<host>:<port>/<path>;<params>`|
+|rtsp,rtspu|RTSP实时流传输协议(Real Time Streaming Protocol)解析音视频。`rtspu`的`u`表示使用`UDP`协议来获取资源。基本格式：`rtsp://<user>:<password>@<host>:<port>/<path>`，`rtspu://<user>:<password>@<host>:<port>/<path>`|
+|file|指定主机（本地磁盘、网络文件系统、其他文件共享系统）上直接访问文件。如`file://OFFICE-FS/policies/a.doc`|
+|news|用来访问一些特定的文章或新闻组，new URL自身包含的信息不足以对资源进行定位。`@`用来区分指定新闻组的news URL和指向特定新闻文章的news URL。基本格式：`news:<newsgroup>`和`news:<news-article-id>`，如:`news:rec.arts.startrek`|
+
+
+
 
