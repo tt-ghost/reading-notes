@@ -74,6 +74,59 @@ Server: Test Server
   Version 1.0
 ```
 
+### 方法
+
+#### 安全方法有`GET`和`HEAD`
+
+#### HEAD允许客户端在未获取实际资源情况下，对资源首部进行检查，用途：
+
+- 在不获取资源的情况下了解资源的情况（如判断其类型）
+- 通过查看相应状态码，看某个对象是否存在
+- 通过查看首部，测试资源是否被修改
+
+```
+curl -i -X HEAD 'http://www.baidu.com'
+// 响应
+Warning: Setting custom HTTP method to HEAD with -X/--request may not work the
+Warning: way you want. Consider using -I/--head instead.
+HTTP/1.1 200 OK
+Server: bfe/1.0.8.18
+Date: Thu, 19 Jan 2017 03:17:12 GMT
+Content-Type: text/html
+Content-Length: 277
+Last-Modified: Mon, 13 Jun 2016 02:50:04 GMT
+Connection: Keep-Alive
+ETag: "575e1f5c-115"
+Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform
+Pragma: no-cache
+Accept-Ranges: bytes
+
+curl: (18) transfer closed with 277 bytes remaining to read
+```
+
+查看资源是否存在
+
+```
+curl -i -X HEAD 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png'
+// 响应
+Warning: Setting custom HTTP method to HEAD with -X/--request may not work the
+Warning: way you want. Consider using -I/--head instead.
+HTTP/1.1 200 OK
+Server: bfe/1.0.8.13-sslpool-patch
+Date: Thu, 19 Jan 2017 03:18:36 GMT
+Content-Type: image/png
+Content-Length: 6958
+Connection: keep-alive
+ETag: "5874d951-1b2e"
+Last-Modified: Tue, 10 Jan 2017 12:53:37 GMT
+Expires: Tue, 14 Feb 2017 00:08:31 GMT
+Age: 356841
+Cache-Control: max-age=2592000
+Accept-Ranges: bytes
+Ohc-Response-Time: 1 0 0 0 0 0
+```
+
+
 
 
 
