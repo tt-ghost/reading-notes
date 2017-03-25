@@ -157,5 +157,17 @@ Ohc-Response-Time: 1 0 0 0 0 0
 - 服务端收到 `Expect: 100 Continue` 的头，用`100 Continue`或错误码响应
 - 代理收到`100 Continue`期望的请求时，应将`Expect: 100 Continue`向下转发。如果知道下一个服务器只能与HTTP/1.1之前的版本兼容，就应该以`417 Expectation Failed`错误进行响应
  
+#### 200~299 成功状态码
 
+|状态码|原因短语|
+|-----|------|
+|200|OK|
+|201|Created|
+|202|Accepted|
+|203|Non-Authoritative Infomation|
+|204|No Content|
+|205|Reset Content|
+|206|Partial Content|
+
+#### 300~399 重定向状态码
 
