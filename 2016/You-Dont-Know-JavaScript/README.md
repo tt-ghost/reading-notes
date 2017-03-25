@@ -31,6 +31,7 @@
 ### 第二章 词法作用域
 
 #### 词法阶段
+
 + 作用域共有两种主要的工作模型：
   + 词法作用域，大部分语言都是这种
   + 动态作用域，如Bash、Perl等
@@ -39,6 +40,7 @@
 
 #### 欺骗词法
 + 欺骗词法作用域会导致性能下降
+
 ##### eval
 ```javascript
 function evalTest1(str, b){ 
@@ -48,6 +50,7 @@ function evalTest1(str, b){
 evalTest1("var a=3", 3); // 3 3 
 ```
 eval 有自己的作用域
+
 ```javascript
 function evalTest1(str){ 
   "use strict"; // 严格模式
@@ -59,9 +62,11 @@ evalTest1("var a=3");
 与eval类似还有，setTimeout、setInterval及new Function
 
 ##### with
+
 - 尽管with块可以将一个对象处理为词法作用域，但是这个块内部的 var 申明并不会被限制在这个块的作用域中，而是被添加到with所处的函数作用域中
 - eval 函数如果接受了含有一个或多个申明的代码，就会修改其所处的词法作用域，而with申明实际上是根据你传递给他的对象凭空创建了一个全新的词法作用域
 - eval在严格模式下被严格禁用，而在保留核心功能的前提下，间接或非安全的使用eval也被禁止了
+
 ```javascript
 function foo(obj){
   with(obj){

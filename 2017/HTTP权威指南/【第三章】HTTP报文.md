@@ -37,6 +37,7 @@ HTTP/1.1 200 OK
 ```
 
 **注意：**
+
 > 一组HTTP首部(headers)总是应该以一个空行(单个CRLF)结束，即使没有首部和实体的主体部分也应该如此。因历史原因很多客户端和服务器在没有实体主体部分时，错误的省略了CRLF，为与这些流行但不符合规则的实现互通，服务端、客户端应该接受那些没有最后CRLF的报文
 
 #### 起始行
@@ -66,7 +67,7 @@ HTTP/1.1 200 OK
 - 扩展首部，规范中没有定义的新首部
 - 首部延续行，将首部行分为多行可以提高可读性，多出来每行前面至少要有一个空格或制表符
 
-```
+```js
 HTTP/1.0 200 OK
 Content-Type: image/gif
 Content-Length: 3452
@@ -84,7 +85,7 @@ Server: Test Server
 - 通过查看相应状态码，看某个对象是否存在
 - 通过查看首部，测试资源是否被修改
 
-```
+```js
 curl -i -X HEAD 'http://www.baidu.com'
 // 响应
 Warning: Setting custom HTTP method to HEAD with -X/--request may not work the
@@ -106,7 +107,7 @@ curl: (18) transfer closed with 277 bytes remaining to read
 
 查看资源是否存在
 
-```
+```js
 curl -i -X HEAD 'https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png'
 // 响应
 Warning: Setting custom HTTP method to HEAD with -X/--request may not work the
@@ -148,7 +149,13 @@ Ohc-Response-Time: 1 0 0 0 0 0
 - 如果带有未知方法的请求时，通常以501 Not Implemented(无法实现)状态返回
 - 请求的发送接收一般按惯例：对说发送的内容要求严一些，对接收的内容宽容一些
 
+### 状态码
 
+#### 100~199 信息状态码
 
+- `100 Continue`，主要用于优化，客户端只有避免向服务器发送一个服务器无法处理或使用的大实体时，才应该使用 `100 Continue`，即带 `Expect: 100 Continue` 的头部，并且在等待服务器响应一定时间后，客户端应该直接将实体发送出去
+- 服务端收到 `Expect: 100 Continue` 的头，用`100 Continue`或错误码响应
+- 代理收到`100 Continue`期望的请求时，应将`Expect: 100 Continue`向下转发。如果知道下一个服务器只能与HTTP/1.1之前的版本兼容，就应该以`417 Expectation Failed`错误进行响应
+ 
 
 
