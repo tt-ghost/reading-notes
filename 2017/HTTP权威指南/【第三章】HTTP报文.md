@@ -171,3 +171,26 @@ Ohc-Response-Time: 1 0 0 0 0 0
 
 #### 300~399 重定向状态码
 
+|状态码|原因短语|
+|-----|------|
+|300|Multiple Choices|
+|301|Moved Permanently|
+|302|Found|
+|303|See Other|
+|304|Not Modified|
+|305|User Proxy|
+|306|(未使用)|
+|307|Temporary Redirect|
+
+#### 400~499 客户端错误状态码
+
+|状态码|原因短语|
+|-----|------|
+|400|Bad Request|
+|401|Unauthorized|
+|402|Payment Required|
+|403|Forbidden|
+|404|Not Found|
+|405|Method Not Allowed|
+|406|Not Acceptable|
+
