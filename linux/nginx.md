@@ -1,0 +1,41 @@
+##安装
+
+- http://nginx.org/en/download.html    
+    下载http://nginx.org/download/nginx-1.2.0.tar.gz    
+- tar -xf nginx-1.2.0.tar.gz
+- 进入解压目录  chmod a+rwx *
+- ./configure --without-http_rewrite_module
+- make && make install
+- sudo /usr/local/nginx/sbin/nginx
+- 浏览器访问 localhost
+- MAC下安装
+```shell 
+$ brew install nginx
+```
+
+##启动
+
+- 启动命令
+
+```shell 
+$ sudo nginx -c /usr/local/nginx/conf/nginx.conf
+```
+- 停止命令
+```shell 
+$ sudo nginx -s stop
+#或者
+$ sudo nginx -s quit
+```
+- 重启命令
+```shell
+$ ./nginx -s reload
+```
+- 判断nginx配置是否正确
+```shell
+$ nginx -t -c /usr/local/nginx/conf/nginx.conf
+#或
+$ cd  /usr/local/nginx/sbin
+$ ./nginx -t
+```
+
+
