@@ -1,6 +1,5 @@
-#linux学习之curl
+## curl
 
-### curl
 ```shell
 #将url服务器上的文件保存到本地为filename
 curl -o fileName url

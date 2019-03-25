@@ -1,6 +1,6 @@
-# linux之top、htop
+## top、htop
 
-## 字段说明
+### 字段说明
 
 ```
 PID：进行的标识号
@@ -17,7 +17,7 @@ TIME+：该进程启动后占用的总的CPU时间
 COMMAND：进程启动的启动命令名称
 ```
 
-## 快捷键
+### 快捷键
 
 ```
 Shortcut Key    Function Key    Description
@@ -44,7 +44,7 @@ I                               倒转排序顺序
 s                               选择某进程，按 s: 用 strace 追踪进程的系统调用
 ```
 
-## 设置
+### 设置
 
 ```
 fn + F2
