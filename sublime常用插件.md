@@ -1,4 +1,5 @@
-##sublime Text常用插件
+## sublime常用插件
+
 - Babel
 
 > ES6和React JSX语法高亮
