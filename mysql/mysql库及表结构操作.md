@@ -43,3 +43,9 @@ set character_set_database=utf8;
 use test_db;
 ```
 
+
+## 表操作
+
+- 重命名表 `rename table user to user2`
+- 删除表 `drop table user`
+
